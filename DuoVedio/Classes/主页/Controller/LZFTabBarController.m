@@ -34,6 +34,8 @@
 }
 
 - (void)setupStatus {
+    
+    // 启动后显示状态栏
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 }
 
@@ -46,15 +48,14 @@
     // 普通状态下的文字属性
     NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
     normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
     [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
     
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor cyanColor];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
 }
-
 
 - (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {
@@ -69,9 +70,9 @@
 - (void)setupChildViewcontrollors
 {
     
-    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFKKViewController alloc] init]] title:@"开眼" image:@"edit_Professional" selectedImage:@"edit_Professional"];
+    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFKKViewController alloc] init]] title:@"开眼" image:@"edit_Professional" selectedImage:@"edit_Consumers"];
     
-    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFVVViewController alloc] init]] title:@"V电影" image:@"edit_Consumers" selectedImage:@"edit_Consumers"];
+    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFVVViewController alloc] init]] title:@"V电影" image:@"edit_Professional" selectedImage:@"edit_Consumers"];
 }
 
 @end

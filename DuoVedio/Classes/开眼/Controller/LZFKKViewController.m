@@ -266,6 +266,7 @@ static NSString * const EveryDayCellID = @"EveryDayCell";
 
 #pragma mark - 单元格代理方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     [self showImageAtIndexPath:indexPath];
 }
 
