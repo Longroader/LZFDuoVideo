@@ -1,0 +1,71 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐练习
+//
+//  Created by 刘志锋 on 16/5/27.
+//  Copyright © 2016年 longroader. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/****** 在#ifdef __OBJC__和#endif之间的内容，只会拷贝到OC源代码文件中，不会拷贝到其他语言的源代码文件中******/
+/** 条件编译 **/
+#ifdef __OBJC__
+
+#import "UIView+ZFExtension.h"
+//#import "UIBarButtonItem+ZFExtension.h"
+//#import "UITextField+LZFExtension.h"
+//#import "LZFConst.h"
+//#import "NSString+LZFExtension.h"
+//#import "NSDate+LZFExtension.h"
+//#import "NSCalendar+LZFExtension.h"
+//#import "UIImage+LZFExtension.h"
+//#import "UIImageView+LZFExtension.h"
+
+/*** 评论头部控件的字体 ***/
+#define LZFCommentSectionHeaderFont [UIFont systemFontOfSize:15]
+
+/** 将服务返回的数据写入plist **/
+#define LZFWriteToPlist(responseObject, filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/liuzhifeng/Desktop/%@.plist", filename] atomically:YES];
+
+/** 日志 **/
+#ifdef DEBUG
+#define LZFLog(...) NSLog(__VA_ARGS__);
+#else
+#define LZFLog(...)
+#endif
+
+#define LZFLogFunc LZFLog(@"%s", __func__);
+
+/** 颜色 **/
+#define LZFColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define LZFColor(r, g, b) LZFColorA((r), (g), (b), 255)
+#define LZFRandomColor LZFColor( arc4random_uniform(255),  arc4random_uniform(255),  arc4random_uniform(255))
+#define LZFGlobleBgColor LZFColor(206, 206, 206)
+
+#import <UIImageView+WebCache.h>
+#import "LORequestManger.h"
+#import "UIImageView+AFNetworking.h"
+
+/**** 全局视频cell的高度 ****/
+#define cellHeight 250
+/**** 设备屏幕宽高 ****/
+#define LZFScreenWidth [UIScreen mainScreen].bounds.size.width
+#define LZFScreenHeight [UIScreen mainScreen].bounds.size.height
+/**** 设备屏幕宽高 ****/
+#define kSelfWidth self.frame.size.width
+#define kSelfHeight self.frame.size.height
+
+/**** 每日精选视频URL ****/
+#define kEveryDay @"http://baobab.wandoujia.com/api/v1/feed?num=10&date=%@&vc=67&u=011f2924aa2cf27aa5dc8066c041fe08116a9a0c&v=1.8.0&f=iphone"
+
+/**** 通知 ****/
+#define shareClickNotification @"shareClick"
+
+
+#endif
+/****** 在#ifdef __OBJC__和#endif之间的内容，只会拷贝到OC源代码文件中，不会拷贝到其他语言的源代码文件中******/
+
+#endif /* PrefixHeader_pch */
+
