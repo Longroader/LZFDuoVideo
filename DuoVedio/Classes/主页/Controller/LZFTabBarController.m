@@ -60,8 +60,9 @@
 - (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {
     vc.tabBarItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:image];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    vc.tabBarItem.image = [UIImage zf_imageWithRenderOriginalName:image];
+    vc.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    vc.tabBarItem.selectedImage = [UIImage zf_imageWithRenderOriginalName:selectedImage];
     
     [self addChildViewController:vc];
 }
@@ -70,9 +71,9 @@
 - (void)setupChildViewcontrollors
 {
     
-    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFKKViewController alloc] init]] title:@"开眼" image:@"edit_Professional" selectedImage:@"edit_Consumers"];
+    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFKKViewController alloc] init]] title:nil image:@"ic_tab_1_49x49_" selectedImage:@"ic_tab_1_selected_49x49_"];
     
-    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFVVViewController alloc] init]] title:@"V电影" image:@"edit_Professional" selectedImage:@"edit_Consumers"];
+    [self setupOneChildViewController:[[LZFNavigationController alloc] initWithRootViewController:[[LZFVVViewController alloc] init]] title:nil image:@"ic_tab_2_49x49_" selectedImage:@"ic_tab_2_selected_49x49_"];
 }
 
 @end

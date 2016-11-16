@@ -10,6 +10,7 @@
 		0BD10A1FD818A3CE9E1D5DAF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF62E064EF8E36BBD7E6974 /* libPods.a */; };
 		1A4D51FD1DBA0F21009D00D6 /* LZFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D51FC1DBA0F21009D00D6 /* LZFNavigationController.m */; };
 		1A4D52001DBA187D009D00D6 /* LZFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D51FF1DBA187D009D00D6 /* LZFDetailViewController.m */; };
+		1A7745D51DDC94D700BDE699 /* UIImage+LZFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7745D41DDC94D700BDE699 /* UIImage+LZFExtension.m */; };
 		1AA0F2D41DD8687A00BC9A80 /* LZFCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0F2D31DD8687A00BC9A80 /* LZFCover.m */; };
 		1AB6BB661DB78EFF00D571B7 /* DuoVedioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6BB651DB78EFF00D571B7 /* DuoVedioUITests.m */; };
 		1AB6BBF91DB78FD300D571B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6BB701DB78FD300D571B7 /* Assets.xcassets */; };
@@ -73,6 +74,8 @@
 		1A4D51FC1DBA0F21009D00D6 /* LZFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFNavigationController.m; sourceTree = "<group>"; };
 		1A4D51FE1DBA187D009D00D6 /* LZFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFDetailViewController.h; sourceTree = "<group>"; };
 		1A4D51FF1DBA187D009D00D6 /* LZFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFDetailViewController.m; sourceTree = "<group>"; };
+		1A7745D31DDC94D700BDE699 /* UIImage+LZFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LZFExtension.h"; sourceTree = "<group>"; };
+		1A7745D41DDC94D700BDE699 /* UIImage+LZFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LZFExtension.m"; sourceTree = "<group>"; };
 		1AA0F2D21DD8687A00BC9A80 /* LZFCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFCover.h; sourceTree = "<group>"; };
 		1AA0F2D31DD8687A00BC9A80 /* LZFCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFCover.m; sourceTree = "<group>"; };
 		1AB6BB451DB78EFD00D571B7 /* DuoVedio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoVedio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,6 +385,8 @@
 			children = (
 				1AB6BBDA1DB78FD300D571B7 /* UIView+ZFExtension.h */,
 				1AB6BBDB1DB78FD300D571B7 /* UIView+ZFExtension.m */,
+				1A7745D31DDC94D700BDE699 /* UIImage+LZFExtension.h */,
+				1A7745D41DDC94D700BDE699 /* UIImage+LZFExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 				1AB6BBFD1DB78FD300D571B7 /* AFHTTPRequestOperationManager.m in Sources */,
 				1AB6BC051DB78FD300D571B7 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1AB6BC2D1DB78FD300D571B7 /* rilegouleView.m in Sources */,
+				1A7745D51DDC94D700BDE699 /* UIImage+LZFExtension.m in Sources */,
 				1AB6BC221DB78FD300D571B7 /* LZFTabBarController.m in Sources */,
 				1AB6BC251DB78FD300D571B7 /* UIView+ZFExtension.m in Sources */,
 				1AB6BC0D1DB78FD300D571B7 /* LORequestManger.m in Sources */,

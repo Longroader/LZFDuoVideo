@@ -20,7 +20,7 @@
 //#import "NSString+LZFExtension.h"
 //#import "NSDate+LZFExtension.h"
 //#import "NSCalendar+LZFExtension.h"
-//#import "UIImage+LZFExtension.h"
+#import "UIImage+LZFExtension.h"
 //#import "UIImageView+LZFExtension.h"
 
 /*** 评论头部控件的字体 ***/
